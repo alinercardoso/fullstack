@@ -2,81 +2,72 @@
 <html lang="pt-br">
 
     <head>
+
         <meta charset="UTF-8">
         <title>Full stack Eletro</title> 
+        <link rel="stylesheet" type="text/CSS" href="./CSS/Estilo.css">
+
     </head>
 
     <body>
-        <!--Menu-->
-        <table bgcolor="black" width="100%">
-            <tr>
-                <td align="center" width="25%"><a href="index.html"><img width="200px" src="Images/logo.png" alt="Full stack Eletro"</a></td>
-                <td align="center" width="25%"><a href="Produtos.html"><font face="Verdana" color="white">Produtos</font></a></td>
-                <td align="center" width="25%"><a href="loja.html"><font face="Verdana" color="white">Nossas Lojas</font></a></td>
-                <td align="center" width="25%"><a href="contato.html"><font face="Verdana" color="white">Contato</font></a></td>
-            </tr>
-        <!-- Fim do Menu-->
-        </table>
 
-        <h1>
-          <font face="Verdana">Seja bem vindo(a)!</font>
-        </h1>
-        <p>Aqui em nossa loja, <i>programadores tem desconto</i> nos produtos para sua casa!</p>
-        <br><br><br>
-        
-        <table border="0" width="100%" cellpadding=>
-            <center>
-                <h2>
-                    <font align="center" face="Verdana">PROMOÇÕES IMPERDÍVEIS!</font>
-                </h2>
-            </center>
-            <br><br><br><br>
-            <tr>
-                <td width="20%" align="center" valign="botton">
-                    <img src="Images/Eletros/Geladeiras/Geladeira Side By Side Philco Frost Free Eco Inverter 489 Litros PRF504I Inox-220v.jpg" width="120px">
-                    <br>
-                    <font face="Arial" size="2">Geladeira Side By Side Philco Frost Free Eco Inverter 489 Litros PRF504I Inox-220v</font> 
-                    <br>
-                    <font face="Arial" size="2"><strike>R$ 5.499,00</strike></font>
-                    <font face="Arial" size="4" color="red">R$ 4.999,00</font>
-                    <br>      
-                </td>
-                <td width="20%" align="center" valign="botton">
-                    <img src="./Images/Eletros/Lavadoras/Lavadora Front Load Premium Care 11kg (LFE11) - 220V.jpg" width="120px">
-                    <br>
-                    <font face="Arial" size="2">Lavadora Front Load Premium Care 11kg (LFE11) - 220V</font> 
-                    <br>
-                    <font face="Arial" size="2"><strike>R$ 4.219,00</strike></font>
-                    <font face="Arial" size="4" color="red">R$ 2.879,00</font>
-                    <br>      
-                </td>
-                <td width="20%" align="center" valign="botton">
-                    <img src="./Images/Eletros/Lava louças/Lava-Louças Inox 14 Serviços (LV14X) - 127V.jpg" width="120px">
-                    <br>
-                    <font face="Arial" size="2">Lava-Louças Inox 14 Serviços (LV14X) - 127V</font> 
-                    <br>
-                    <font face="Arial" size="2"><strike>R$ 4.799,00</strike></font>
-                    <font face="Arial" size="4" color="red">R$ 3.989,00</font>
-            </tr>
+        <nav id="menu">
+            <a href="index.html"><img width="200px" src="Images/logo.png" alt="Full stack Eletro"></a>
+            <a href="Produtos.html">Produtos</a>
+            <a href="loja.html">Nossas Lojas</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+
+        <main>
+            <h1>
+                Seja bem vindo(a)!
+            </h1>
+      
+            <p>Aqui em nossa loja, <i>programadores tem desconto</i> nos produtos para sua casa!</p>
+
+            <br>
+
+            <h2>PROMOÇÕES IMPERDÍVEIS!</h2>
+
+            <br><br><br>
             
-            
-        </table>
-  
-        <br><br><br>
-
-        <center>
-            <span>
-                <p>
-                    <font face="Arial" color="#808080"> Formas de Pagamento</font>
-                </p>
-                <img width="25%" src="Images/forma-de-pagamento.png" alt="Formas de Pagamento">
-            </span>
-        </center>
-
-        <center>
-            <font face="Arial" size="2" color="#808080">&copy;Full Stack Eletro</font>
-        </center>
+            <section class="produto">
         
+                <div class="produto_destaque">
+                    <img align="center" src="Images/Eletros/Geladeiras/Geladeira Side By Side Philco Frost Free Eco Inverter 489 Litros PRF504I Inox-220v.jpg" width="120px" alig="center">
+                    <hr>
+                    <p class="descricao">Geladeira Side By Side Philco Frost Free Eco Inverter</p>
+                    <p class="descricao"><strike>R$ 5.499,00</strike></p>
+                    <p class="preco">R$ 4.999,00</p>
+                </div>
+                
+                <div class="produto_destaque">
+                    <img align="center" src="./Images/Eletros/Lavadoras/Lavadora Front Load Premium Care 11kg (LFE11) - 220V.jpg" width="120px">
+                    <hr>
+                    <p class="descricao">Lavadora Front Load Premium Care 11kg (LFE11) - 220V</p> 
+                    <p class="descricao"><strike>R$ 4.219,00</strike></p>
+                    <p class="preco">R$ 2.879,00</p>
+                </div>
+                    
+                <div class="produto_destaque">
+                    <img align="center" src="./Images/Eletros/Lava louças/Lava-Louças Inox 14 Serviços (LV14X) - 127V.jpg" width="120px">
+                    <hr>
+                    <p class="descricao">Lava-Louças Inox 14 Serviços (LV14X) - 127V</p> 
+                    <p class="descricao"><strike>R$ 4.799,00</strike></p>
+                    <p class="preco">R$ 3.989,00</p>
+                </div>
+            </section>
+
+        </main>>
+
+        <br><br><br> 
+
+        <footer id="rodape">
+            <p>Formas de Pagamento</p>
+            <img width="25%" src="Images/forma-de-pagamento.png" alt="Formas de Pagamento">
+            <p>&copy;Full Stack Eletro</p>
+        </footer>
+      
     </body>
 
 </html> 
