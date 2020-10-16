@@ -6,6 +6,8 @@
         <meta charset="UTF-8">
         <title>Full stack Eletro</title> 
         <link rel="stylesheet" type="text/CSS" href="./CSS/Estilo.css">
+        <script src="./js/funcoes.js"></script>
+
 
     </head>
 
@@ -44,12 +46,14 @@
                 <h2>Fale Conosco</h2>
                 <form >                                            
                     <h4>Nome:</h4>
-                    <input type="text" style="width:600px>;">
+                    <input type="text" style="width:600px;">
                         
                     <h4>Mensagem</h4>
-                    <textarea style="width:600px>;"></textarea>
+                    <textarea style="width:600px;"></textarea>
                     <br>
-                    <input type="submit" value="Enviar"></td>
+                    <input onclick="confirmarenvio()" type="submit" value="Enviar">
+
+                    
                                      
                 </form>
             </section>
