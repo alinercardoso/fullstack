@@ -17,7 +17,7 @@ primary key(idprod)
 create table pedidos(
 idpedido int not null auto_increment,
 nome_cliente varchar (300) not null,
-email varchar(250) not null,
+cliente_email varchar(250) not null,
 end_rua varchar(300) not null,
 end_num int not null,
 end_bairro varchar(100),
