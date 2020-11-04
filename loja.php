@@ -13,12 +13,10 @@
 
     <body>
 
-        <nav id="menu">
-            <a href="index.html"><img width="200px" src="Images/logo.png" alt="Full stack Eletro"></a>
-            <a href="Produtos.html">Produtos</a>
-            <a href="loja.html">Nossas Lojas</a>
-            <a href="contato.html">Contato</a>
-        </nav>
+    <!--Menu-->
+    <?php
+        include('menu.html');
+    ?>
 
         <main>
         
