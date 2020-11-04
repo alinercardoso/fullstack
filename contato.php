@@ -1,3 +1,28 @@
+<?php   //conexão
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "fullstack";
+
+//criando a conexão
+
+$conn = mysqli_connect($servername, $username, $password, $database);
+
+//testando a conexão
+
+if(!$conn){
+    die("A conexão ao DB falhou: ". mysqli_connect_error());
+}
+
+if (isset($_POST['nome']) && isset($_POST['msg'])){
+    $nome = $_POST['nome'];
+    $msg = $_POST['msg'];
+
+    $sql = "insert into comentarios (nome, msg) values ('$nome', '$msg')";
+    $result = $conn->query($sql);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -13,12 +38,10 @@
 
     <body>
 
-        <nav id="menu">
-            <a href="index.html"><img width="200px" src="Images/logo.png" alt="Full stack Eletro"></a>
-            <a href="Produtos.html">Produtos</a>
-            <a href="loja.html">Nossas Lojas</a>
-            <a href="contato.html">Contato</a>
-        </nav>
+    <!--Menu-->
+    <?php
+        include('menu.html');
+    ?>
 
         <main>
             <h1>Contato</h1>
@@ -44,14 +67,14 @@
 
             <section id="formulario">
                 <h2>Fale Conosco</h2>
-                <form >                                            
+                <form method = "post" action ="">                                            
                     <h4>Nome:</h4>
-                    <input type="text" style="width:600px;">
+                    <input type="text" name = "nome" style="width:600px;">
                         
                     <h4>Mensagem</h4>
-                    <textarea style="width:600px;"></textarea>
+                    <textarea name = "msg" style="width:600px;"></textarea>
                     <br>
-                    <input onclick="confirmarenvio()" type="submit" value="Enviar">
+                    <input onclick="confirmarenvio()" name = "submit" type="submit" value="Enviar">
 
                     
                                      
