@@ -32,6 +32,15 @@ quantidade int not null,
 primary key (idpedido)
 );
 
+create table comentarios(
+idcomentario int not null auto_increment,
+nome varchar (100) not null,
+msg varchar(300) not null,
+datamsg datetime default now(),
+primary key  (idcomentario)
+);
+
+
 insert into produtos (categoria, descricao, imagem, preco, preco_final) 
 values
 ('geladeira', 'Geladeira Side By Side Philco Frost Free Eco Inverter 489 Litros',"Images/Eletros/Geladeiras/Geladeira Side By Side Philco Frost Free Eco Inverter 489 Litros PRF504I Inox-220v.jpg", 5499.00,4999.00),
@@ -41,21 +50,10 @@ values
 ('fogao','Fogão 6 Bocas Consul CFS6 NAR Inox - Acendimento Automático','./Images/Eletros/Fogoes/Fogão 6 Bocas Consul CFS6 NAR Inox - Acendimento Automático.jpg',1799.00,1349.00),
 ('microondas','Microondas Philco Pmo21e 21l Prata - 127v','./Images/Eletros/Microondas/Micro-ondas Philco Pmo21e 21l Prata - 127v.jpg',449.90,399.90),
 ('microondas','Microondas Electrolux de bancada Branco 34L (MEO44) - 220V','./Images/Eletros/Microondas/Micro-ondas Electrolux de bancada Branco com Função Tira Odor e Manter Aquecido 34L (MEO44) - 220V.jpg',719.00,629.90),
-('lavaroupas','Lavadora de roupas Front Load Premium Care 11kg (LFE11) - 220V','/Images/Eletros/Lavadoras/Lavadora Front Load Premium Care 11kg (LFE11) - 220V.jpg',4219.00,2879.00),
+('lavaroupas','Lavadora de roupas Front Load Premium Care 11kg (LFE11) - 220V','./Images/Eletros/Lavadoras/Lavadora Front Load Premium Care 11kg (LFE11) - 220V.jpg',4219.00,2879.00),
 ('lavaroupas','Lavadora de Roupas Electrolux LES09 Essential com Diluição Inteligente 8,5kg','./Images/Eletros/Lavadoras/Lavadora de Roupas Electrolux LES09 Essential com Diluição Inteligente 8,5kg - Branca.jpg',1849.00,1169.00),
 ('lavaroupas','Lavadora de roupas Samsung com Motor Digital Inverter Branca – 11Kg','./Images/Eletros/Lavadoras/Lavadora Samsung com Motor Digital Inverter Branca – 11Kg.jpg',3980.00,2925.00),
 ('lavaloucas','Lava Louças Inox 14 Serviços (LV14X) - 127V','./Images/Eletros/Lava louças/Lava-Louças Inox 14 Serviços (LV14X) - 127V.jpg',4799.00,3989.00),
 ('lavaloucas','Lava Louças Inox 10 Serviços (LV10X) - 220V','./Images/Eletros/Lava louças/Lava Louças Inox 10 Serviços (LV10X) - 220V.jpg',3999.00,3466.00);
 
-insert into pedidos (nome_cliente, email, end_rua, end_num, end_bairro, end_cep, end_cidade, end_estado, telefone, nome_prod, valor_unit, valor_total, quantidade)
-values
-('Aline Cardoso', 'aline.rcardoso@poli.ufrj.br', 'Rua Valparaíso', 81, 'Tijuca', 20261130, 'Rio de Janeiro', 'RJ', 996025572,'Fogão Consul 4 Bocas CFO4NAR com Acendimento Automático - Inox', 949.00, 1898.00, 2),
-('João da Silva', 'joao@gmail.com', 'Rua Aguiar', 20, 'Tijuca', 20261130, 'Rio de Janeiro', 'RJ', 123456789,'Lavadora de roupas Samsung com Motor Digital Inverter Branca – 11Kg', 2925.00, 2925.00, 1),
-('Bruna de Solza', 'brunasilva@gmail.com', 'Av. São Francisco Xavier', 39, 'Tijuca', 20550010, 'Rio de Janeiro', 'RJ', 987456321,'Lava Louças Inox 10 Serviços (LV10X) - 220V', 3466.00, 17330.00, 5),
-('Lorena Pires', 'lorenapires@gmail.com', 'Rua Valparaíso', 81, 'Tijuca', 20261130, 'Rio de Janeiro', 'RJ', 996025572,'Fogão Consul 4 Bocas CFO4NAR com Acendimento Automático - Inox', 949.00, 949.00, 1),
-('Aline Cardoso', 'aline.rcardoso@poli.ufrj.br', 'Rua Valparaíso', 81, 'Tijuca', 20261130, 'Rio de Janeiro', 'RJ', 996025572,'Fogão Consul 4 Bocas CFO4NAR com Acendimento Automático - Inox', 949.00, 1898.00, 2),
-('João da Silva', 'joao@gmail.com', 'Rua Aguiar', 20, 'Tijuca', 20261130, 'Rio de Janeiro', 'RJ', 123456789,'Lavadora de roupas Samsung com Motor Digital Inverter Branca – 11Kg', 2925.00, 2925.00, 1),
-('Bruna de Solza', 'brunasilva@gmail.com', 'Av. São Francisco Xavier', 39, 'Tijuca', 20550010, 'Rio de Janeiro', 'RJ', 987456321,'Lava Louças Inox 10 Serviços (LV10X) - 220V', 3466.00, 17330.00, 5),
-('Lorena Pires', 'lorenapires@gmail.com', 'Rua Valparaíso', 81, 'Tijuca', 20261130, 'Rio de Janeiro', 'RJ', 996025572,'Fogão Consul 4 Bocas CFO4NAR com Acendimento Automático - Inox', 949.00, 949.00, 1);
-;
 
